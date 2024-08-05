@@ -1,0 +1,72 @@
+{
+  "name": "ewig",
+  "description": "A deployment tool for the Permaweb.",
+  "version": "0.0.1",
+  "author": "K @kay-is",
+  "bin": {
+    "ewig": "./bin/run.js"
+  },
+  "dependencies": {
+    "@ar.io/sdk": "^2.0.2",
+    "@ardrive/turbo-sdk": "^1.9.0",
+    "@oclif/core": "^4",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^5",
+    "@permaweb/aoconnect": "^0.0.56",
+    "arweave": "^1.15.1",
+    "mime": "^4.0.4",
+    "ora": "^8.0.1"
+  },
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^4",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "eslint-config-prettier": "^9",
+    "mocha": "^10",
+    "oclif": "^4",
+    "shx": "^0.3.3",
+    "ts-node": "^10",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "/bin",
+    "/dist",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://ewigkeit.ar-io.dev",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "AGPL-3.0-only",
+  "main": "dist/index.js",
+  "type": "module",
+  "oclif": {
+    "bin": "ewig",
+    "dirname": "ewig",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " "
+  },
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -b && cp ../process/project.lua dist",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "npm run lint",
+    "prepack": "oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md"
+  },
+  "types": "dist/index.d.ts"
+}
