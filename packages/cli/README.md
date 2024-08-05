@@ -45,19 +45,19 @@ USAGE
 
 ## `ewig costs`
 
-describe the command here
+Estimate the costs of deploying the project.
 
 ```
 USAGE
   $ ewig costs
 
 DESCRIPTION
-  describe the command here
+  Estimate the costs of deploying the project.
 ```
 
 ## `ewig deploy`
 
-Deploys the current project.
+Deploys the project on Arweave. Uses "preview" environment and current branch by default.
 
 ```
 USAGE
@@ -69,7 +69,7 @@ FLAGS
   --skip-registration  Prevents deployment from registering with AO process, disables cache updates.
 
 DESCRIPTION
-  Deploys the current project.
+  Deploys the project on Arweave. Uses "preview" environment and current branch by default.
 ```
 
 ## `ewig help [COMMAND]`
@@ -94,7 +94,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.7
 
 ## `ewig init [PROJECTNAME]`
 
-Initialize a new Ewig project in the current directory.
+Initialize a new project on AO and links it the working directory.
 
 ```
 USAGE
@@ -107,12 +107,12 @@ FLAGS
   -f, --force  Override previous initialization.
 
 DESCRIPTION
-  Initialize a new Ewig project in the current directory.
+  Initialize a new project on AO and links it the working directory.
 ```
 
 ## `ewig inspect`
 
-Load the project info.
+Load the project info from AO.
 
 ```
 USAGE
@@ -122,12 +122,12 @@ FLAGS
   --json  Switch to JSON output.
 
 DESCRIPTION
-  Load the project info.
+  Load the project info from AO.
 ```
 
 ## `ewig link PROJECT-ID`
 
-Links the current project to an existing AO process
+Links the working directory to a project on AO.
 
 ```
 USAGE
@@ -137,12 +137,12 @@ ARGUMENTS
   PROJECT-ID  The address of the project's AO process
 
 DESCRIPTION
-  Links the current project to an existing AO process
+  Links the working directory to a project on AO.
 ```
 
 ## `ewig login [KEYFILE]`
 
-Activate a private key.
+Activate a private key. Will generate a new key if none is provided.
 
 ```
 USAGE
@@ -152,7 +152,7 @@ ARGUMENTS
   KEYFILE  Path to your JWK file.
 
 DESCRIPTION
-  Activate a private key.
+  Activate a private key. Will generate a new key if none is provided.
 ```
 
 ## `ewig logout`
