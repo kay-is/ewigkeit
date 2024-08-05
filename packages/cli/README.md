@@ -16,11 +16,11 @@ A deployment tool for the Permaweb.
 
 <!-- usage -->
 ```sh-session
-$ npm install -g ewig
+$ npm install -g @kay-is/ewig
 $ ewig COMMAND
 running command...
 $ ewig (--version)
-ewig/0.0.1 linux-x64 node-v20.15.1
+@kay-is/ewig/0.0.1 linux-x64 node-v20.15.1
 $ ewig --help [COMMAND]
 USAGE
   $ ewig COMMAND
