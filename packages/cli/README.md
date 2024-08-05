@@ -7,106 +7,63 @@ A deployment tool for the Permaweb.
 [![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/ewig)
 
 <!-- toc -->
-
-- [Usage](#usage)
-- [Commands](#commands)
+* [Ewig](#ewig)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g ewig
 $ ewig COMMAND
 running command...
 $ ewig (--version)
-ewig/0.0.0 linux-x64 node-v20.14.0
+ewig/0.0.1 linux-x64 node-v20.15.1
 $ ewig --help [COMMAND]
 USAGE
   $ ewig COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`ewig costs`](#ewig-costs)
+* [`ewig deploy`](#ewig-deploy)
+* [`ewig help [COMMAND]`](#ewig-help-command)
+* [`ewig init [PROJECTNAME]`](#ewig-init-projectname)
+* [`ewig inspect`](#ewig-inspect)
+* [`ewig link PROJECT-ID`](#ewig-link-project-id)
+* [`ewig login [KEYFILE]`](#ewig-login-keyfile)
+* [`ewig logout`](#ewig-logout)
+* [`ewig plugins`](#ewig-plugins)
+* [`ewig plugins add PLUGIN`](#ewig-plugins-add-plugin)
+* [`ewig plugins:inspect PLUGIN...`](#ewig-pluginsinspect-plugin)
+* [`ewig plugins install PLUGIN`](#ewig-plugins-install-plugin)
+* [`ewig plugins link PATH`](#ewig-plugins-link-path)
+* [`ewig plugins remove [PLUGIN]`](#ewig-plugins-remove-plugin)
+* [`ewig plugins reset`](#ewig-plugins-reset)
+* [`ewig plugins uninstall [PLUGIN]`](#ewig-plugins-uninstall-plugin)
+* [`ewig plugins unlink [PLUGIN]`](#ewig-plugins-unlink-plugin)
+* [`ewig plugins update`](#ewig-plugins-update)
+* [`ewig turbo-credits balance`](#ewig-turbo-credits-balance)
+* [`ewig turbo-credits buy USDAMOUNT`](#ewig-turbo-credits-buy-usdamount)
+* [`ewig whoami`](#ewig-whoami)
 
-- [`ewig`](#ewig)
-- [`ewig  `](#ewig--)
-- [`ewig build`](#ewig-build)
-- [`ewig deploy`](#ewig-deploy)
-- [`ewig dev`](#ewig-dev)
-- [`ewig domains add ARNSDOMAIN`](#ewig-domains-add-arnsdomain)
-- [`ewig domains inspect ARNSDOMAIN`](#ewig-domains-inspect-arnsdomain)
-- [`ewig domains ls`](#ewig-domains-ls)
-- [`ewig domains rm ARNSDOMAIN`](#ewig-domains-rm-arnsdomain)
-- [`ewig help [COMMAND]`](#ewig-help-command)
-- [`ewig init [PROJECTNAME]`](#ewig-init-projectname)
-- [`ewig login [KEYFILE]`](#ewig-login-keyfile)
-- [`ewig logout`](#ewig-logout)
-- [`ewig plugins`](#ewig-plugins)
-- [`ewig plugins add PLUGIN`](#ewig-plugins-add-plugin)
-- [`ewig plugins:inspect PLUGIN...`](#ewig-pluginsinspect-plugin)
-- [`ewig plugins install PLUGIN`](#ewig-plugins-install-plugin)
-- [`ewig plugins link PATH`](#ewig-plugins-link-path)
-- [`ewig plugins remove [PLUGIN]`](#ewig-plugins-remove-plugin)
-- [`ewig plugins reset`](#ewig-plugins-reset)
-- [`ewig plugins uninstall [PLUGIN]`](#ewig-plugins-uninstall-plugin)
-- [`ewig plugins unlink [PLUGIN]`](#ewig-plugins-unlink-plugin)
-- [`ewig plugins update`](#ewig-plugins-update)
-- [`ewig whoami`](#ewig-whoami)
+## `ewig costs`
 
-## `ewig`
-
-Show active key and address.
+describe the command here
 
 ```
 USAGE
-  $ ewig
+  $ ewig costs
 
 DESCRIPTION
-  Show active key and address.
-
-ALIASES
-  $ ewig
-  $ ewig
+  describe the command here
 ```
-
-## `ewig  `
-
-Show active key and address.
-
-```
-USAGE
-  $ ewig
-
-DESCRIPTION
-  Show active key and address.
-
-ALIASES
-  $ ewig
-  $ ewig
-```
-
-## `ewig build`
-
-Build the project with the buildCommand in the config.
-
-```
-USAGE
-  $ ewig build [-p]
-
-FLAGS
-  -p, --prod  build for production
-
-DESCRIPTION
-  Build the project with the buildCommand in the config.
-```
-
-_See code: [src/commands/build.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/build.ts)_
 
 ## `ewig deploy`
 
@@ -114,102 +71,16 @@ Deploys the current project.
 
 ```
 USAGE
-  $ ewig deploy [--prod] [--skip-domain]
+  $ ewig deploy [--prod] [--skip-domain] [--skip-registration]
 
 FLAGS
-  --prod         Deploy to production and assign main ArNS name.
-  --skip-domain  Prevent ArNS name assing when deploying in production.
+  --prod               Deploy to production and assign main ArNS domain.
+  --skip-domain        Prevent ArNS domain assing when deploying in production.
+  --skip-registration  Prevents deployment from registering with AO process, disables cache updates.
 
 DESCRIPTION
   Deploys the current project.
 ```
-
-_See code: [src/commands/deploy.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/deploy.ts)_
-
-## `ewig dev`
-
-Run the devCommand from ewig.json
-
-```
-USAGE
-  $ ewig dev
-
-DESCRIPTION
-  Run the devCommand from ewig.json
-```
-
-_See code: [src/commands/dev.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/dev.ts)_
-
-## `ewig domains add ARNSDOMAIN`
-
-Add an ArNS domain to the project.
-
-```
-USAGE
-  $ ewig domains add ARNSDOMAIN [--add-controller]
-
-ARGUMENTS
-  ARNSDOMAIN  ArNS domain to add to the project.
-
-FLAGS
-  --add-controller  Add the project as controller to ANT.
-
-DESCRIPTION
-  Add an ArNS domain to the project.
-```
-
-_See code: [src/commands/domains/add.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/domains/add.ts)_
-
-## `ewig domains inspect ARNSDOMAIN`
-
-Read details of an ArNS domain.
-
-```
-USAGE
-  $ ewig domains inspect ARNSDOMAIN
-
-ARGUMENTS
-  ARNSDOMAIN  ARNs domain to inspect.
-
-DESCRIPTION
-  Read details of an ArNS domain.
-```
-
-_See code: [src/commands/domains/inspect.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/domains/inspect.ts)_
-
-## `ewig domains ls`
-
-List all ArNS domains associated with the project.
-
-```
-USAGE
-  $ ewig domains ls
-
-DESCRIPTION
-  List all ArNS domains associated with the project.
-```
-
-_See code: [src/commands/domains/ls.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/domains/ls.ts)_
-
-## `ewig domains rm ARNSDOMAIN`
-
-Remove ArNS domain from the project.
-
-```
-USAGE
-  $ ewig domains rm ARNSDOMAIN [--remove-controller]
-
-ARGUMENTS
-  ARNSDOMAIN  ArNS domain to remove from project.
-
-FLAGS
-  --remove-controller  Remove the project as controller from ANT.
-
-DESCRIPTION
-  Remove ArNS domain from the project.
-```
-
-_See code: [src/commands/domains/rm.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/domains/rm.ts)_
 
 ## `ewig help [COMMAND]`
 
@@ -229,7 +100,7 @@ DESCRIPTION
   Display help for ewig.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.6/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.7/src/commands/help.ts)_
 
 ## `ewig init [PROJECTNAME]`
 
@@ -249,7 +120,35 @@ DESCRIPTION
   Initialize a new Ewig project in the current directory.
 ```
 
-_See code: [src/commands/init.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/init.ts)_
+## `ewig inspect`
+
+Load the project info.
+
+```
+USAGE
+  $ ewig inspect [--json]
+
+FLAGS
+  --json  Switch to JSON output.
+
+DESCRIPTION
+  Load the project info.
+```
+
+## `ewig link PROJECT-ID`
+
+Links the current project to an existing AO process
+
+```
+USAGE
+  $ ewig link PROJECT-ID
+
+ARGUMENTS
+  PROJECT-ID  The address of the project's AO process
+
+DESCRIPTION
+  Links the current project to an existing AO process
+```
 
 ## `ewig login [KEYFILE]`
 
@@ -266,8 +165,6 @@ DESCRIPTION
   Activate a private key.
 ```
 
-_See code: [src/commands/login.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/login.ts)_
-
 ## `ewig logout`
 
 Deactivate private key.
@@ -279,8 +176,6 @@ USAGE
 DESCRIPTION
   Deactivate private key.
 ```
-
-_See code: [src/commands/logout.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/logout.ts)_
 
 ## `ewig plugins`
 
@@ -303,7 +198,7 @@ EXAMPLES
   $ ewig plugins
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/index.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/index.ts)_
 
 ## `ewig plugins add PLUGIN`
 
@@ -377,7 +272,7 @@ EXAMPLES
   $ ewig plugins inspect myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/inspect.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/inspect.ts)_
 
 ## `ewig plugins install PLUGIN`
 
@@ -426,7 +321,7 @@ EXAMPLES
     $ ewig plugins install someuser/someplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/install.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/install.ts)_
 
 ## `ewig plugins link PATH`
 
@@ -456,7 +351,7 @@ EXAMPLES
   $ ewig plugins link myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/link.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/link.ts)_
 
 ## `ewig plugins remove [PLUGIN]`
 
@@ -497,7 +392,7 @@ FLAGS
   --reinstall  Reinstall all plugins after uninstalling.
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/reset.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/reset.ts)_
 
 ## `ewig plugins uninstall [PLUGIN]`
 
@@ -525,7 +420,7 @@ EXAMPLES
   $ ewig plugins uninstall myplugin
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/uninstall.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/uninstall.ts)_
 
 ## `ewig plugins unlink [PLUGIN]`
 
@@ -569,7 +464,34 @@ DESCRIPTION
   Update installed plugins.
 ```
 
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.7/src/commands/plugins/update.ts)_
+_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v5.3.9/src/commands/plugins/update.ts)_
+
+## `ewig turbo-credits balance`
+
+Get your token balance for the Turbo bundler
+
+```
+USAGE
+  $ ewig turbo-credits balance
+
+DESCRIPTION
+  Get your token balance for the Turbo bundler
+```
+
+## `ewig turbo-credits buy USDAMOUNT`
+
+Buy tokens to use with the Turbo bundler
+
+```
+USAGE
+  $ ewig turbo-credits buy USDAMOUNT
+
+ARGUMENTS
+  USDAMOUNT  Amount of USD to spend
+
+DESCRIPTION
+  Buy tokens to use with the Turbo bundler
+```
 
 ## `ewig whoami`
 
@@ -581,12 +503,5 @@ USAGE
 
 DESCRIPTION
   Show active key and address.
-
-ALIASES
-  $ ewig
-  $ ewig
 ```
-
-_See code: [src/commands/whoami.ts](https://github.com/kay-is/ewig/blob/v0.0.0/src/commands/whoami.ts)_
-
 <!-- commandsstop -->
