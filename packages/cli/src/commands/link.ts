@@ -10,7 +10,7 @@ export default class Link extends Oclif.Command {
     }),
   }
 
-  static override description = 'Links the current project to an existing AO process'
+  static override description = 'Links the working directory to a project on AO.'
 
   public async run(): Promise<void> {
     const cliParameters = await this.parse(Link)

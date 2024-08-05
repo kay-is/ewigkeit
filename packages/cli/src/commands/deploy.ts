@@ -6,7 +6,8 @@ import * as Constants from '../utilities/constants.js'
 import * as Utils from '../utilities/index.js'
 
 export default class Deploy extends Oclif.Command {
-  static override description = 'Deploys the current project.'
+  static override description =
+    'Deploys the project on Arweave. Uses "preview" environment and current branch by default.'
 
   static override flags = {
     prod: Oclif.Flags.boolean({

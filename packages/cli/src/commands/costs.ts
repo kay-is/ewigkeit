@@ -7,7 +7,7 @@ import * as Utils from '../utilities/index.js'
 const renderCosts = (costs: number) => (costs < 0.01 ? '<$0.01' : `~$${costs.toFixed(2)}`)
 
 export default class Costs extends Oclif.Command {
-  static override description = 'describe the command here'
+  static override description = 'Estimate the costs of deploying the project.'
 
   public async run(): Promise<void> {
     const spinner = Utils.getSpinner(`Estimating costs of deployment...`)

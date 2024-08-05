@@ -3,7 +3,7 @@ import * as Oclif from '@oclif/core'
 import * as Utils from '../utilities/index.js'
 
 export default class Inspect extends Oclif.Command {
-  static override description = 'Load the project info.'
+  static override description = 'Load the project info from AO.'
 
   static override flags = {
     json: Oclif.Flags.boolean({description: 'Switch to JSON output.'}),

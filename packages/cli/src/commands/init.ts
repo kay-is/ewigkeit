@@ -9,7 +9,7 @@ export default class Init extends Oclif.Command {
     projectName: Oclif.Args.string({description: 'Name of the new project.'}),
   }
 
-  static override description = 'Initialize a new Ewig project in the current directory.'
+  static override description = 'Initialize a new project on AO and links it the working directory.'
 
   static override flags = {
     force: Oclif.Flags.boolean({char: 'f', description: 'Override previous initialization.'}),

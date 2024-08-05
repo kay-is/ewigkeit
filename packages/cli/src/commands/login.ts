@@ -8,7 +8,8 @@ export default class Login extends Oclif.Command {
     keyfile: Oclif.Args.string({description: 'Path to your JWK file.'}),
   }
 
-  static override description = 'Activate a private key.'
+  static override description =
+    'Activate a private key. Will generate a new key if none is provided.'
 
   public async run(): Promise<void> {
     const spinner = Utils.getSpinner('Logging in...')
