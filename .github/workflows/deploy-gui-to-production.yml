@@ -1,0 +1,34 @@
+name: Deploy GUI to staging_ewigkeit
+
+on:
+  push:
+    branches:
+      - production
+    paths:
+      - "packages/gui/**"
+
+defaults:
+  run:
+    working-directory: ./packages/gui
+
+jobs:
+  deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm run build
+      - run: pnpx @kay-is/ewig deploy --prod # uses EWIG_KEY environment variable
+        env:
+          EWIG_KEY: ${{secrets.EWIG_KEY}}
