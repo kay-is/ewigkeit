@@ -1,4 +1,4 @@
-name: Deploy GUI to staging_ewigkeit
+name: Deploy GUI to ewigkeit
 
 on:
   push:
