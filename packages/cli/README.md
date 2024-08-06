@@ -1,6 +1,6 @@
 # Ewig
 
-A deployment tool for the Permaweb.
+A deployment tool for the Permaweb!
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ewig.svg)](https://npmjs.org/package/ewig)
