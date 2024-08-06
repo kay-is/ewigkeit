@@ -20,7 +20,7 @@ $ npm install -g @kay-is/ewig
 $ ewig COMMAND
 running command...
 $ ewig (--version)
-@kay-is/ewig/0.0.5 linux-x64 node-v20.16.0
+@kay-is/ewig/0.0.6 linux-x64 node-v20.16.0
 $ ewig --help [COMMAND]
 USAGE
   $ ewig COMMAND
