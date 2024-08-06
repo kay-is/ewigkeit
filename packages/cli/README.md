@@ -1,20 +1,22 @@
 # Ewig
 
-A deployment tool for the Permaweb!
+A deployment tool for the Permaweb.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/ewig.svg)](https://npmjs.org/package/ewig)
 [![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/ewig)
 
 <!-- toc -->
-* [Ewig](#ewig)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Ewig](#ewig)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @kay-is/ewig
 $ ewig COMMAND
@@ -26,12 +28,14 @@ USAGE
   $ ewig COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`ewig help [COMMAND]`](#ewig-help-command)
+
+- [`ewig help [COMMAND]`](#ewig-help-command)
 
 ## `ewig help [COMMAND]`
 
@@ -52,4 +56,5 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.7/src/commands/help.ts)_
+
 <!-- commandsstop -->
