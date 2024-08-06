@@ -1,7 +1,7 @@
 {
   "name": "@kay-is/ewig",
   "description": "A deployment tool for the Permaweb.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "K @kay-is",
   "bin": {
     "ewig": "./bin/run.js"
