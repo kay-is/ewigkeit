@@ -3,8 +3,8 @@
 A deployment tool for the Permaweb!
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/ewig.svg)](https://npmjs.org/package/ewig)
-[![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/ewig)
+[![Version](https://img.shields.io/npm/v/ewig.svg)](https://npmjs.org/package/@kay-is/ewig)
+[![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/@kay-is/ewig)
 
 <!-- toc -->
 
