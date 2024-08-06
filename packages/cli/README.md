@@ -7,41 +7,46 @@ A deployment tool for the Permaweb!
 [![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/@kay-is/ewig)
 
 <!-- toc -->
-* [Ewig](#ewig)
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [Ewig](#ewig)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
+
 ```sh-session
 $ npm install -g @kay-is/ewig
 $ ewig COMMAND
 running command...
 $ ewig (--version)
 @kay-is/ewig/0.0.7 linux-x64 node-v20.15.1
+
 $ ewig --help [COMMAND]
 USAGE
   $ ewig COMMAND
 ...
 ```
+
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-* [`ewig costs`](#ewig-costs)
-* [`ewig deploy`](#ewig-deploy)
-* [`ewig help [COMMAND]`](#ewig-help-command)
-* [`ewig init [PROJECTNAME]`](#ewig-init-projectname)
-* [`ewig inspect`](#ewig-inspect)
-* [`ewig link PROJECT-ID`](#ewig-link-project-id)
-* [`ewig login [KEYFILE]`](#ewig-login-keyfile)
-* [`ewig logout`](#ewig-logout)
-* [`ewig turbo-credits balance`](#ewig-turbo-credits-balance)
-* [`ewig turbo-credits buy USDAMOUNT`](#ewig-turbo-credits-buy-usdamount)
-* [`ewig whoami`](#ewig-whoami)
+
+- [`ewig costs`](#ewig-costs)
+- [`ewig deploy`](#ewig-deploy)
+- [`ewig help [COMMAND]`](#ewig-help-command)
+- [`ewig init [PROJECTNAME]`](#ewig-init-projectname)
+- [`ewig inspect`](#ewig-inspect)
+- [`ewig link PROJECT-ID`](#ewig-link-project-id)
+- [`ewig login [KEYFILE]`](#ewig-login-keyfile)
+- [`ewig logout`](#ewig-logout)
+- [`ewig turbo-credits balance`](#ewig-turbo-credits-balance)
+- [`ewig turbo-credits buy USDAMOUNT`](#ewig-turbo-credits-buy-usdamount)
+- [`ewig whoami`](#ewig-whoami)
 
 ## `ewig costs`
 
@@ -205,4 +210,5 @@ USAGE
 DESCRIPTION
   Show active key and address.
 ```
+
 <!-- commandsstop -->
