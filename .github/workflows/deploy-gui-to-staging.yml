@@ -1,0 +1,23 @@
+name: Deploy GUI to staging_ewigkeit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "package/gui/**"
+
+defaults:
+  run:
+    working-directory: ./packages/gui
+
+jobs:
+  deploy:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: pnpm install
+      - run: pnpm run build
+      - run: pnpx @kay-is/ewig deploy # uses EWIG_KEY environment variable
