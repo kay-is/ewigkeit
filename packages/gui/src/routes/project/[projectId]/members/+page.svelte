@@ -51,7 +51,7 @@
     oninput={(e) => (memberAddress = e.currentTarget.value)}
     placeholder="Arweave Address"
   />
-  <button class="btn btn-primary" onclick={addMember} disabled={!memberAddress || !memberName}
+  <button class="btn btn-outline" onclick={addMember} disabled={!memberAddress || !memberName}
     >Add Member</button
   >
 </div>
@@ -74,7 +74,10 @@
             <td>{member.Name}</td>
             <td>{member.Address}</td>
             <td>
-              <button class="btn btn-sm btn-error" onclick={removeMember(member.Address)}>
+              <button
+                class="btn btn-sm btn-outline btn-error"
+                onclick={removeMember(member.Address)}
+              >
                 Remove
               </button>
             </td>

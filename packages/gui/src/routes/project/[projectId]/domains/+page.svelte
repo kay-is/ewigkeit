@@ -126,7 +126,7 @@
     {/each}
   </select>
   <button
-    class="btn btn-primary"
+    class="btn btn-outline"
     onclick={assignProductionDomain}
     disabled={productionDomain === data.Domains.production}
   >
@@ -147,8 +147,9 @@
           >{arnsDomain}</a
         >
         (Branch: {branch})
-        <button class="btn btn-error btn-sm" onclick={removePreviewDomain(arnsDomain, branch)}
-          >Remove</button
+        <button
+          class="btn btn-outline btn-error btn-sm"
+          onclick={removePreviewDomain(arnsDomain, branch)}>Remove</button
         >
       </li>
     {/each}
@@ -168,7 +169,7 @@
     value={previewBranch}
     oninput={(e) => (previewBranch = e.currentTarget.value)}
   />
-  <button class="btn btn-primary" onclick={assignPreviewDomain} disabled={!previewBranch}
+  <button class="btn btn-outline" onclick={assignPreviewDomain} disabled={!previewBranch}
     >Assign Domain</button
   >
 </div>
@@ -185,7 +186,7 @@
     value={arnsDomain}
     placeholder="ArNS Domain"
   />
-  <button class="btn btn-primary" onclick={addAnt} disabled={!arnsDomain}>Add Domain</button>
+  <button class="btn btn-outline" onclick={addAnt} disabled={!arnsDomain}>Add Domain</button>
 </div>
 {#if Object.keys(data.Ants).length === 0}
   <p>No ArNS domains associated with this project.</p>
@@ -210,10 +211,12 @@
               <div class="join w-full">
                 <a
                   target="_blank"
-                  class="btn btn-info btn-sm"
+                  class="btn btn-outline btn-info btn-sm"
                   href={`https://arns.app/#/manage/ants/${antAddress}`}>Info</a
                 >
-                <button class="btn btn-error btn-sm" onclick={removeAnt(arnsDomain)}>Remove</button>
+                <button class="btn btn-outline btn-error btn-sm" onclick={removeAnt(arnsDomain)}
+                  >Remove</button
+                >
               </div>
             </td>
           </tr>
