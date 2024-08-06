@@ -217,14 +217,6 @@ local function splitString(input, separator)
   return output
 end
 
-local function joinArray(input, separator)
-  local output = ""
-  for _, word in ipairs(input) do
-    output = output .. separator .. word
-  end
-  return output
-end
-
 addProtectedHandler(
   "Assign-Domain-To-Deployment",
   function(message)
@@ -264,7 +256,7 @@ addProtectedHandler(
     local undername = "@"
     if domainWithUndernames ~= domain then
       domainArray[#domainArray] = nil
-      undername = joinArray(domainArray, "_")
+      undername = table.concat(domainArray, "_")
     end
 
     ao.send({
