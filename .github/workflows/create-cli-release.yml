@@ -19,6 +19,9 @@ jobs:
         node-version: [20]
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
       - uses: actions/setup-node@v4
       - name: Check if version already exists
         id: version-check
@@ -38,6 +41,9 @@ jobs:
           fi
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Install dependencies
+        if: ${{ steps.version-check.outputs.skipped == 'false' }}
+        run: pnpm install
       - name: Create Github Release
         uses: ncipollo/release-action@2c591bcc8ecdcd2db72b97d6147f871fcd833ba5
         if: ${{ steps.version-check.outputs.skipped == 'false' }}
