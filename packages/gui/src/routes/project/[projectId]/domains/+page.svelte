@@ -23,7 +23,7 @@
   let arnsDomain = $state('')
   const addAnt = async () => {
     error = ''
-    loading = 'Adding ArNS domain to project...'
+    loading = 'Adding project to ANT process...'
     const io = ArioSdk.IO.init()
     const arnsRecord = await io.getArNSRecord({ name: arnsDomain })
 
@@ -33,6 +33,15 @@
       return
     }
 
+    try {
+      await Ao.send(arnsRecord.processId, 'Add-Controller', {
+        Controller: data.Id,
+      })
+    } catch (error) {
+      error = "Couldn't add project as controller to ANT process. Please, add it manually."
+    }
+
+    loading = 'Adding ArNS domain to project...'
     await Ao.send(data.Id, 'Add-Ant', {
       ArnsDomain: arnsDomain,
       AntAddress: arnsRecord.processId,
@@ -45,6 +54,24 @@
   const removeAnt = (arnsDomain: string) => async () => {
     loading = 'Removing ArNS domain from project...'
     await Ao.send(data.Id, 'Remove-Ant', { ArnsDomain: arnsDomain })
+
+    try {
+      loading = 'Removing project from ANT process...'
+      const io = ArioSdk.IO.init()
+      const arnsRecord = await io.getArNSRecord({ name: arnsDomain })
+
+      if (!arnsRecord) {
+        error = 'ArNS domain not found.'
+        loading = ''
+        return
+      }
+
+      await Ao.send(arnsRecord.processId, 'Remove-Controller', {
+        Controller: data.Id,
+      })
+    } catch (error) {
+      error = "Couldn't remove project as controller from ANT process. Please, remove it manually."
+    }
     await Navigation.invalidateAll()
     loading = ''
   }
@@ -177,7 +204,7 @@
 <h2 class="py-5 text-2xl font-bold">ArNS Domains</h2>
 <p>Manage ArNS domains associated with this project.</p>
 <br />
-<p>Note: Add the project ID as controller to your ArNS domain before adding it to the project.</p>
+<p>Note: Only the owner of the domain can add controllers.</p>
 
 <div class="join py-5">
   <input
