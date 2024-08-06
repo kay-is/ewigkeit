@@ -1,7 +1,7 @@
 {
   "name": "@kay-is/ewig",
   "description": "A deployment tool for the Permaweb.",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "K @kay-is",
   "bin": {
     "ewig": "./bin/run.js"
@@ -64,9 +64,9 @@
     "lint": "eslint . --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "npm run lint",
-    "prepack": "oclif manifest && oclif readme",
+    "prepack": "oclif manifest",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif readme && git add README.md"
+    "version": "oclif readme"
   },
   "types": "dist/index.d.ts"
 }
