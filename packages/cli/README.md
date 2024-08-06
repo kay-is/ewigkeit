@@ -7,35 +7,31 @@ A deployment tool for the Permaweb!
 [![Downloads/week](https://img.shields.io/npm/dw/ewig.svg)](https://npmjs.org/package/ewig)
 
 <!-- toc -->
-
-- [Ewig](#ewig)
-- [Usage](#usage)
-- [Commands](#commands)
+* [Ewig](#ewig)
+* [Usage](#usage)
+* [Commands](#commands)
 <!-- tocstop -->
 
 # Usage
 
 <!-- usage -->
-
 ```sh-session
 $ npm install -g @kay-is/ewig
 $ ewig COMMAND
 running command...
 $ ewig (--version)
-@kay-is/ewig/0.0.4 linux-x64 node-v20.16.0
+@kay-is/ewig/0.0.5 linux-x64 node-v20.16.0
 $ ewig --help [COMMAND]
 USAGE
   $ ewig COMMAND
 ...
 ```
-
 <!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
-
-- [`ewig help [COMMAND]`](#ewig-help-command)
+* [`ewig help [COMMAND]`](#ewig-help-command)
 
 ## `ewig help [COMMAND]`
 
@@ -56,5 +52,4 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.2.7/src/commands/help.ts)_
-
 <!-- commandsstop -->
