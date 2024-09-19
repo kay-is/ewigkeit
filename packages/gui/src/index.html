@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/assets/images/favicon.ico" />
-    <title>Ewigkeit | New Project</title>
+    <link rel="icon" href="./assets/images/favicon.ico" />
+    <title>Ewigkeit</title>
   </head>
   <body class="bg-white dark:bg-gray-800">
     <script type="module">
       import { mount } from "svelte"
-      import New from "/new.svelte"
+      import Home from "./index.svelte"
 
       const target = document.createElement("div")
       document.body.appendChild(target)
-      mount(New, { target })
+      mount(Home, { target })
     </script>
   </body>
 </html>

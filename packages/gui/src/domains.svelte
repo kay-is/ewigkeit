@@ -148,7 +148,7 @@
               </A>
             </TableBodyCell>
             <TableBodyCell>
-              <A href={`https://g8way.io/${activeDeployment}`}>
+              <A href={`https://ar-io.dev/${activeDeployment}`}>
                 {activeDeployment}&nbsp;
                 <ArrowUpRightFromSquareOutline size="sm" />
               </A>
@@ -189,7 +189,7 @@
                 </A>
               </TableBodyCell>
               <TableBodyCell>
-                <A href={`https://g8way.io/${activeDeployment}`}>
+                <A href={`https://ar-io.dev/${activeDeployment}`}>
                   {activeDeployment}&nbsp;
                   <ArrowUpRightFromSquareOutline size="sm" />
                 </A>
@@ -247,10 +247,7 @@
           <TableBodyRow>
             <TableBodyCell>{domain}</TableBodyCell>
             <TableBodyCell>
-              <A
-                href={`https://www.ao.link/#/entity/${address}`}
-                target="_blank"
-              >
+              <A href={`https://ao.link/#/entity/${address}`} target="_blank">
                 {address}&nbsp;
                 <ArrowUpRightFromSquareOutline size="sm" />
               </A>

@@ -22,7 +22,7 @@
 </script>
 
 <Navbar fluid={false}>
-  <NavBrand href="/">
+  <NavBrand href="./">
     <span class="text-xl font-bold">Ewigkeit</span>
   </NavBrand>
   {#if !!appState.project.id}
@@ -43,10 +43,12 @@
     </div>
     <NavHamburger />
     <NavUl>
-      <NavLi href={"/#" + appState.project.id}>Overview</NavLi>
-      <NavLi href={"/deployments#" + appState.project.id}>Deployments</NavLi>
-      <NavLi href={"/domains#" + appState.project.id}>Domains</NavLi>
-      <NavLi href={"/members#" + appState.project.id}>Members</NavLi>
+      <NavLi href={"./#" + appState.project.id}>Overview</NavLi>
+      <NavLi href={"./deployments.html#" + appState.project.id}>
+        Deployments
+      </NavLi>
+      <NavLi href={"./domains.html#" + appState.project.id}>Domains</NavLi>
+      <NavLi href={"./members.html#" + appState.project.id}>Members</NavLi>
     </NavUl>
   {/if}
   <div class="flex items-center lg:order-2">

@@ -65,7 +65,7 @@
             <TableBodyCell>{member.Name}</TableBodyCell>
             <TableBodyCell>
               <A
-                href="https://www.ao.link/#/entity/{member.Address}"
+                href="https://ao.link/#/entity/{member.Address}"
                 target="_blank"
               >
                 {member.Address}&nbsp;

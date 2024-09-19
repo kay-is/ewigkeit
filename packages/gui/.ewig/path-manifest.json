@@ -1,0 +1,60 @@
+{
+  "manifest": "arweave/paths",
+  "version": "0.2.0",
+  "index": {
+    "path": "index.html"
+  },
+  "fallback": {
+    "id": "TehChe6CKR3z5gzv391buf-EkDMnhbz7MM99NgbNsiM"
+  },
+  "paths": {
+    "assets/ao-BBwIkpz_.js": {
+      "id": "gPxObRMGit_UCAOqQV1rRQQyYAsqxpeXyXpLXGl31nw"
+    },
+    "assets/deployments-DEY4GhQL.js": {
+      "id": "PSs0uUPBTMJCm88_fVYBGiVoIyTmwOJmqfX3gE8Q6bE"
+    },
+    "assets/domains-Dqs_LSLw.js": {
+      "id": "xucBdGQHdRn0WvJU3bC0pMZrHlxiLPrUDcJ-nGd_N8s"
+    },
+    "assets/favicon-CXaelAMC.ico": {
+      "id": "fNZi3dc2vSvVYd-jeb3CSGpu4rO6BUT9vUwW8zhh-cg"
+    },
+    "assets/gui-BWVNd2rR.js": {
+      "id": "tf939VrhtZpj9vlkGz5zFaJsGMDFpp9oX6IgFh1qbxw"
+    },
+    "assets/home-D_UPQatC.js": {
+      "id": "XDiF-xsWLRwkWlJFWjfKine37HXjy1bOzLdrDRWSe44"
+    },
+    "assets/members-BCKbwLX8.js": {
+      "id": "BS6v_9GqTvNEM2rcL2kJRAbf6wkg_faRxuWlSNUHJQg"
+    },
+    "assets/navbar-DZMxcek_.css": {
+      "id": "6MJ6p0efp1EY3FBbH0JATpTQLwu9KK32EaBZzHXFE60"
+    },
+    "assets/navbar-xaLgZVip.js": {
+      "id": "9qPJMrFhjb4jq4LdMsUEFAEcZpgwGjpazbOe8aBIOBY"
+    },
+    "assets/new-DwJpMitU.js": {
+      "id": "ovzXOcjsoY4G9t90aGlMpk3kqDCfF_xaxi9PZK72vwU"
+    },
+    "assets/project.lua": {
+      "id": "azVB0GPUtWAncqwYElUaqGIH2A4wu-Ml5xzsNwzX1lc"
+    },
+    "deployments.html": {
+      "id": "g-mPU2MCeY47bih_8jtCT3xfoP2jKjiDywpHBat8c6o"
+    },
+    "domains.html": {
+      "id": "4jKsq20ICl53QFPdBTnySzPAAIAEjpB5ElVStfumKBA"
+    },
+    "index.html": {
+      "id": "TehChe6CKR3z5gzv391buf-EkDMnhbz7MM99NgbNsiM"
+    },
+    "members.html": {
+      "id": "Gepr-9DyQovlXAuUTuNPex033B0n1SU6Kv6_57bnkSg"
+    },
+    "new.html": {
+      "id": "vOk-t1RAFUZ7ao8HjAhsbeUOEr05-YQrUjeO7TCEOoE"
+    }
+  }
+}

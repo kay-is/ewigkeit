@@ -76,7 +76,7 @@
                 : ""}
             </TableBodyCell>
             <TableBodyCell>
-              <A href={`https://g8tway.io/${deployment.Id}`}>
+              <A href={`https://ar-io.dev/${deployment.Id}`}>
                 {deployment.Id}
               </A>
             </TableBodyCell>
